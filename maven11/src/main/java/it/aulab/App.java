@@ -26,7 +26,7 @@ public class App
         // Jeeg jeeg2 = context.getBean("jeeg", Jeeg.class);
         // System.out.println(jeeg2);
 
-JeegService service= context.getBean("JeegService", JeegService.class);
+JeegService service= context.getBean("jeegService", JeegService.class);
 service.attack();
 service.move();
 

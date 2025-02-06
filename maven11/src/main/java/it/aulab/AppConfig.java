@@ -1,16 +1,15 @@
 package it.aulab;
 
-import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Scope;
+
 
 @Configuration
 @ComponentScan("it.aulab")
 public class AppConfig {
     // @Scope("prototype")
-    @Scope(BeanDefinition.SCOPE_PROTOTYPE)
+    // @Scope(BeanDefinition.SCOPE_PROTOTYPE)
 @Bean(name="jeeg")
 public Jeeg getJeeg(){
 return new Jeeg(getArmSx(), getArmDx(), getLegSx(), getLegDx());

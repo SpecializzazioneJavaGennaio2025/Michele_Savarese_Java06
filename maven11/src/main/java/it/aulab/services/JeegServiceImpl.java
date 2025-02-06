@@ -1,5 +1,6 @@
 package it.aulab.services;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import it.aulab.Arm;
@@ -10,6 +11,9 @@ import it.aulab.repositories.JeegRepository;
 
 @Component("jeegService")
 public class JeegServiceImpl implements JeegService {
+
+@Autowired
+
 
 private JeegRepository jeegRepository;
 
@@ -38,9 +42,9 @@ public JeegServiceImpl(JeegRepository jeegRepository){
         legDx.walk();
     }
 
-    public JeegRepository getJeegRepository() {
-        return jeegRepository;
-    }
+    // public JeegRepository getJeegRepository() {
+    //     return jeegRepository;
+    // }
 
     public void setJeegRepository(JeegRepository jeegRepository) {
         this.jeegRepository = jeegRepository;
